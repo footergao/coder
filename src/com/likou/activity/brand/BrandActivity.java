@@ -64,7 +64,7 @@ public class BrandActivity extends BaseFragmentActivity {
 
 	private void getData() {
 
-		httpRequest("http://game.youku.com/index/lol", API_LISTTOPBRANDS);
+		httpRequest("", API_LISTTOPBRANDS);
 	}
 
 	private void initView() {
@@ -138,52 +138,7 @@ public class BrandActivity extends BaseFragmentActivity {
 	 * @param html
 	 * @return
 	 */
-	private void parseHtmlVideo(String html) {
-
-		Document doc = Jsoup.parse(html);
-		
-		authorName = new ArrayList<String>();
-		authorPhoto = new ArrayList<String>();
-		videoTitles = new ArrayList<String>();
-		videoURL = new ArrayList<String>();
-		
-
-		//author
-		Elements imgs = doc.select("img[src*=ykimg]");
-		for (Element link : imgs) {
-			
-			
-			authorName.add(link.attr("title"));
-			authorPhoto.add(link.attr("src"));
-			
-		}
-
-
-		
-		//video
-		Elements links = doc.select("a[href]");
-		Log.v("gl", "links:" + links.size());
-		for (Element link : links) {
-
-			String v_url = link.attr("abs:href");
-
-			if (link.ownText().length() == 0) {
-				continue;
-			}
-
-			if (videoURL.contains(v_url)) {
-				continue;
-			}
-
-			if (v_url.startsWith("http://v.youku.com/v_show")) {
-
-				videoTitles.add(link.ownText());
-				videoURL.add(v_url);
-			}
-			
-		}
-
-	}
+	private void parseHtmlVideo(String html) {}
 
 	@Override
 	protected int centerLayoutId() {
