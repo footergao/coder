@@ -128,6 +128,7 @@ public class BrandActivity extends BaseFragmentActivity {
 			current_page = 1;
 			styleId = intent.getIntExtra("styleId", 0);
 			getData();
+			Log.v("gl", "aaa");
 		}
 	}
 
