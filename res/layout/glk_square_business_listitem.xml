@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/iv_brand_logo"
+            android:layout_width="80dip"
+            android:layout_height="60dip"
+            android:background="@color/bg_color_deep"
+            android:padding="1sp"
+             />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等级："
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_shop_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="风格："
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_shop_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/pro_grv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:layout_marginTop="2dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray"
+        android:focusable="false"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3" >
+    </GridView>
+
+</LinearLayout>

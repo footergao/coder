@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+    >
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<LinearLayout
+               android:id="@+id/ll_more_version"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left|center_vertical" 
+               android:background="@drawable/lk_selector_addplan"
+               android:padding="18dip"    
+               android:clickable="true"                     
+               android:orientation="horizontal" >
+		<ImageView
+		    android:id="@+id/iv_more_version" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingRight="5dp"
+		    android:src="@drawable/pyw_more_version"
+		    />
+		<LinearLayout 
+    		 	android:layout_width="fill_parent"
+               android:layout_height="wrap_content"                        
+               android:orientation="vertical" > 
+               <LinearLayout 
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                    <TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    style="@style/pyw_bigblack_tv"
+					    android:text="@string/pyw_more_version" />
+               </LinearLayout>
+       </LinearLayout>    
+                           
+	</LinearLayout>     
+	<View
+               android:layout_width="match_parent"
+               android:layout_height="1dip"
+               android:layout_marginLeft="18dip"
+               android:layout_marginRight="18dip"
+               android:background="@color/pyw_login_line" />     
+               
+	
+<!-- 意见反馈  -->
+	<LinearLayout
+               android:id="@+id/ll_more_feedback"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left|center_vertical" 
+               android:background="@drawable/lk_selector_addplan"
+               android:padding="18dip"    
+               android:clickable="true"                     
+               android:orientation="horizontal" >
+		<ImageView
+		    android:id="@+id/iv_more_feedback" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingRight="5dp"
+		    android:src="@drawable/pyw_more_feedback"
+		    />
+		<LinearLayout 
+    		 	android:layout_width="fill_parent"
+               android:layout_height="wrap_content"                        
+               android:orientation="vertical" > 
+               <LinearLayout 
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                    <TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    style="@style/pyw_bigblack_tv"
+					    android:text="@string/pyw_more_feedback" />
+               </LinearLayout>
+       </LinearLayout>    
+                           
+	</LinearLayout>     
+	<View
+               android:layout_width="match_parent"
+               android:layout_height="1dip"
+               android:layout_marginLeft="18dip"
+               android:layout_marginRight="18dip"
+               android:background="@color/pyw_login_line" />   
+               
+<!-- 使用帮助  -->
+	<LinearLayout
+               android:id="@+id/ll_more_help"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left|center_vertical" 
+               android:background="@drawable/lk_selector_addplan"
+               android:padding="18dip"    
+               android:clickable="true"                     
+               android:orientation="horizontal" >
+		<ImageView
+		    android:id="@+id/iv_more_help" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingRight="5dp"
+		    android:src="@drawable/pyw_more_help"
+		    />
+		<LinearLayout 
+    		 	android:layout_width="fill_parent"
+               android:layout_height="wrap_content"                        
+               android:orientation="vertical" > 
+               <LinearLayout 
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                    <TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    style="@style/pyw_bigblack_tv"
+					    android:text="@string/pyw_more_help" />
+               </LinearLayout>
+       </LinearLayout>    
+                           
+	</LinearLayout>     
+	<View
+               android:layout_width="match_parent"
+               android:layout_height="1dip"
+               android:layout_marginLeft="18dip"
+               android:layout_marginRight="18dip"
+               android:background="@color/pyw_login_line" /> 
+               
+<!-- 关于我们  -->
+	<LinearLayout
+               android:id="@+id/ll_more_aboutus"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left|center_vertical" 
+               android:background="@drawable/lk_selector_addplan"
+               android:padding="18dip"    
+               android:clickable="true"                     
+               android:orientation="horizontal" >
+		<ImageView
+		    android:id="@+id/iv_more_help" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingRight="5dp"
+		    android:src="@drawable/pyw_more_aboutus"
+		    />
+		<LinearLayout 
+    		 	android:layout_width="fill_parent"
+               android:layout_height="wrap_content"                        
+               android:orientation="vertical" > 
+               <LinearLayout 
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                    <TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    style="@style/pyw_bigblack_tv"
+					    android:text="@string/pyw_more_aboutus" />
+               </LinearLayout>
+       </LinearLayout>    
+                           
+	</LinearLayout>     
+	<View
+               android:layout_width="match_parent"
+               android:layout_height="1dip"
+               android:layout_marginLeft="18dip"
+               android:layout_marginRight="18dip"
+               android:background="@color/pyw_login_line" /> 
+               
+<!-- 客服电话 -->
+	<LinearLayout
+               android:id="@+id/ll_more_servicephone"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left|center_vertical" 
+               android:background="@drawable/lk_selector_addplan"
+               android:padding="18dip"    
+               android:clickable="true"                     
+               android:orientation="horizontal" >
+		<ImageView
+		    android:id="@+id/iv_more_help" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingRight="5dp"
+		    android:src="@drawable/pyw_more_servicephone"
+		    />
+		<LinearLayout 
+    		 	android:layout_width="fill_parent"
+               android:layout_height="wrap_content"                        
+               android:orientation="vertical" > 
+               <LinearLayout 
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                    <TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    style="@style/pyw_bigblack_tv"
+					    android:text="@string/pyw_more_servicephone" />
+               </LinearLayout>
+       </LinearLayout>    
+                           
+	</LinearLayout>     
+	<View
+               android:layout_width="match_parent"
+               android:layout_height="1dip"
+               android:layout_marginLeft="18dip"
+               android:layout_marginRight="18dip"
+               android:background="@color/pyw_login_line" /> 
+
+</LinearLayout>
+</RelativeLayout>

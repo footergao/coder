@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/formtop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/lk_topbar" >
+    </include>
+    
+     <com.baidu.mapapi.map.MapView
+         android:id="@+id/bmapView"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_below="@+id/formtop"
+         android:clickable="true" />
+
+</RelativeLayout>

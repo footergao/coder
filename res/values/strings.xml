@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="database_version">4</string>
+    <string name="version_mobileSystem">android-2.0</string>
+    <string name="areaCode">0510</string>
+    <string name="areaID">16</string>
+    <!-- 按钮通用 -->
+    <string name="button_ok">确 定</string>
+    <string name="button_cancel">取 消</string>
+    <string name="button_query">查 询</string>
+    <string name="button_reset">重 置</string>
+    <string name="button_back">返 回</string>
+    <string name="button_next">下一步</string>
+    <!-- 站点配置 -->
+    <string name="config_server">服务端:</string>
+    <string name="config_project">工程名:</string>
+    <string name="config_site">站点名:</string>
+    <string name="config_msgCenter">消息中心:</string>
+    <string name="config_serial">注册码:</string>
+    <string name="config_button_ok">确     定</string>
+    <string name="config_button_cancel">取     消</string>
+    <!-- 登录 -->
+    <string name="login_userName">用户名:</string>
+    <string name="login_password">密 码:</string>
+    <string name="login_userName_hint">请输入用户名</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_rememberMe">记住密码</string>
+    <string name="login_button_login">登     录</string>
+    <string name="login_button_config">配     置</string>
+    <!-- 版本更新 -->
+    <string name="edition_currentVersion">当前版本：</string>
+    <string name="edition_newVersion">最新版本：</string>
+    <string name="edition_content">更新内容：</string>
+    <string name="welcome">逛蠡口</string>
+    <string name="glk_menu1">首页</string>
+    <string name="glk_menu2">品牌城</string>
+    <string name="glk_menu3">搜广场</string>
+    <string name="glk_menu4">小编推荐</string>
+    <string name="glk_menu5">最新打折</string>
+    <string name="glk_menu6">限时抢购</string>
+    <string name="glk_menu7">购物车</string>
+    <string name="glk_menu8">我的逛蠡口</string>
+    <string name="glk_menu9">更多</string>
+    <string name="glk_menu10">风格</string>
+    <string name="glk_menu11">按风格搜索</string>
+    <string name="pyw_more_version">版本更新</string>
+    <string name="pyw_more_feedback">意见反馈</string>
+    <string name="pyw_more_help">使用帮助</string>
+    <string name="pyw_more_aboutus">关于我们</string>
+    <string name="pyw_more_servicephone">客服电话</string>
+    <string name="lk_sel_moren">请选择</string>
+    <string name="border_top">Border Top</string>
+    <string name="border_bottom">Border Bottom</string>
+    <string name="image_url">Image Url</string>
+    <string name="image_name">Image Name</string>
+    <string name="image_id">Image Id</string>
+   	<string name="style1">风格》</string>
+    <string name="login_title">逛蠡口</string>
+    <string name="login_new_account">还没有账号？注册新账号点这里</string>
+    <string name="login_error">请输入账号或密码</string>
+    
+    <string name="ptr_pull_to_refresh">Pull to refresh</string>
+    <string name="ptr_release_to_refresh">Release to refresh</string>
+    <string name="ptr_refreshing">Refreshing</string>
+    <string name="ptr_last_updated">Updated: %1$s</string>
+        <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载&#8230;</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="loading">正在加载数据&#8230;</string>
+    
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="register">新用户注册</string>
+    
+    <string name="usernameOrTel">用户名/手机号</string>
+    
+    <string name="registertel">请输入您的手机号：</string>
+    <string name="telcode">请输入手机验证码：</string>
+    <string name="sendcode">发送验证码</string>
+    <string name="next">下一步</string>
+    <string name="passagaion">再次输入密码</string>
+    <string name="finish">完成</string>
+    <string name="login_succ">登录成功</string>
+    <string name="telephone">手机号</string>
+    
+    <string name="classify">样式</string>
+    <string name="category">分类</string>
+    <string name="product">产品</string>
+    
+    <string name="youke">游客</string>
+    <string name="brandDetail">商家详情</string>
+    <string name="buildingDetail">广场详情</string>
+    <string name="shopList">商家列表</string>
+    <string name="productDetail">商品详情</string>
+    <string name="collectShop">收藏的商家</string>
+    <string name="collectProduct">收藏的商品</string>
+    <string name="profile">个人中心</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="outMessage">你确定要退出当前账号吗？</string>
+    <string name="productSearch">产品搜索</string>
+    <string name="style">样式</string>
+    <string name="collect">收藏》</string>
+    <string name="collectSucc">收藏成功</string>
+    <string name="isCollect">已收藏</string>
+    <string name="loginMessage">正在登录，请稍候..</string>
+    <string name="registerMessage">正在注册，请稍候..</string>
+    <string name="flashSale">限时抢购</string>
+    
+    <string name="map1">地图</string>
+    <string name="navi">导航》</string>
+    <string name="vertifyTelephone">正在验证手机号...</string>
+    <string name="sendCodeMessage">正在发送验证码...</string>
+    <string name="registerSucc">恭喜您注册成功，请登录</string>
+    <string name="tishi">提示</string>
+    <string name="cancelCollect">取消收藏》</string>
+    <string name="cancelCollectSucc">取消收藏成功</string>
+    <string name="productList">商品列表</string>
+   	<string name="updateTitle">版本更新</string>
+   	<string name="updateMessage">发现新版本，是否要更新？</string>
+   	<string name="updateOk">确定更新</string>
+   	<string name="updateCancel">取消更新</string>
+   	<string name="discountDetail">打折详情</string>
+   	<string name="clearenceDetail">抢购详情</string>
+   	
+   	<string name="sendMessage">正在验证信息，请稍候..</string>
+   	
+   	<string name="coupons">优惠券</string>
+   	<string name="myOrder">我的订单</string>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="1dip"
+        android:layout_marginTop="55dip" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:animationCache="false"
+            android:clipToPadding="false"
+            android:gravity="center_vertical"
+            android:shrinkColumns="1" >
+
+            <TableRow style="@style/TableRow_Style_Edition" >
+
+                <TextView
+                    style="@style/TextView_Style_Edition"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="@string/edition_currentVersion" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edition_tvOld"
+                    style="@style/TextView_Style_Edition"
+                    android:text="@string/edition_newVersion" />
+            </TableRow>
+
+            <TableRow style="@style/TableRow_Style_Edition" >
+
+                <TextView
+                    style="@style/TextView_Style_Edition"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="@string/edition_newVersion" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edition_tvCurrent"
+                    style="@style/TextView_Style_Edition"
+                    android:text="@string/edition_currentVersion" />
+            </TableRow>
+
+            <TableRow style="@style/TableRow_Style_Edition" >
+
+                <TextView
+                    style="@style/TextView_Style_Edition"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="@string/edition_content" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edition_tvContent"
+                    style="@style/TextView_Style_Edition"
+                    android:text="@string/edition_content" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/edition_btConfirm"
+            android:text="@string/button_ok" />
+
+        <Button
+            android:id="@+id/edition_btCancel"
+            android:layout_marginLeft="25dip"
+            android:text="@string/button_cancel" />
+    </LinearLayout>
+
+</LinearLayout>

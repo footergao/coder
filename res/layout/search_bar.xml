@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/srch_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <EditText
+        android:id="@+id/edt_box"
+        android:imeOptions="actionDone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/srch_box"
+        android:drawableLeft="@drawable/srch_icon"
+        android:hint="搜索··"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+</LinearLayout>

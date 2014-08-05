@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="absListViewStyle" format="reference" />
+    <attr name="listViewStyle" format="reference" />
+
+    <declare-styleable name="AbsListView">
+
+        <!-- Drawable used to indicate the currently selected item in the list. -->
+        <attr name="listSelector" format="color|reference" />
+        <!--
+             When set to true, the selector will be drawn over the selected item.
+             Otherwise the selector is drawn behind the selected item. The default
+             value is false.
+        -->
+        <attr name="drawSelectorOnTop" format="boolean" />
+        <!-- Used by ListView and GridView to stack their content from the bottom. -->
+        <attr name="stackFromBottom" format="boolean" />
+        <!--
+             When set to true, the list uses a drawing cache during scrolling.
+             This makes the rendering faster but uses more memory. The default
+             value is true.
+        -->
+        <attr name="scrollingCache" format="boolean" />
+        <!--
+             When set to true, the list will filter results as the user types. The
+             List's adapter must support the Filterable interface for this to work.
+        -->
+        <attr name="textFilterEnabled" format="boolean" />
+        <!--
+             Sets the transcript mode for the list. In transcript mode, the list
+             scrolls to the bottom to make new items visible when they are added.
+        -->
+        <attr name="transcriptMode" format="integer" />
+        <attr name="cacheColorHint" format="color" />
+        <attr name="smoothScrollbar" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ListView">
+        <attr name="overScrollHeader" format="reference|color" />
+        <!-- Drawable to draw below list content. -->
+
+        <attr name="overScrollFooter" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="PinterestLikeAdapterView">
+        <attr name="plaColumnNumber" format="integer" />
+        <attr name="plaLandscapeColumnNumber" format="integer" />
+        <attr name="plaColumnPaddingLeft" format="dimension" />
+        <attr name="plaColumnPaddingRight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="View"></declare-styleable>
+
+    <!-- 默认全局样式 -->
+    <style name="DefaultTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- 设置没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- TemplateView的样式 -->
+    <style name="TemplateViewRoot">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">@drawable/main_background</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <!-- <item name="android:layout_below">@+id/topImage</item> -->
+    </style>
+    <!-- LinearLayout的样式 -->
+    <style name="LinearLayout_style_Default">
+
+        <!-- <item name="android:id">@+id/common_center</item> -->
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clipChildren">true</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <!-- <item name="android:layout_below">@+id/topImage</item> -->
+    </style>
+
+    <!-- EditView的样式 -->
+    <style name="EditText_style_Default">
+        <item name="android:textSize">16dip</item>
+        <item name="android:layout_width">200dip</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EditText_style_config">
+        <item name="android:textSize">16dip</item>
+        <item name="android:layout_width">220dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:layout_marginLeft">5dip</item>
+    </style>
+    <!-- TextView的样式 -->
+    <style name="TextView_Style_Default">
+        <item name="android:textSize">16dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView_Style_lable">
+        <item name="android:textSize">16dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/black</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView_Style_item">
+        <item name="android:textSize">14dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/black</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView_Style_Edition">
+        <item name="android:textSize">20dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView_Style_Template">
+        <item name="android:textSize">22dip</item>
+        <item name="android:textColor">@drawable/white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- TableRow的样式 -->
+    <style name="TableRow_Style_Default">
+        <item name="android:layout_marginTop">5dip</item>
+        <item name="android:layout_marginBottom">5dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="TableRow_Style_Edition">
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:layout_marginBottom">10dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!-- CheckBox的样式 -->
+    <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@anim/checkbox_selector</item>
+    </style>
+
+    <style name="pyw_all" parent="android:Theme">
+        <item name="android:windowBackground">@color/pyw_all_bg</item>
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:textSize">@dimen/bottom_tab_font_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/home_btn_bg</item>
+        <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- activity 不变暗 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Paoyewu_Main" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:textSize">@dimen/pyw_30</item>
+    </style>
+
+    <!-- Login_TextView的样式 -->
+    <style name="pyw_Login_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:layout_marginRight">5dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <!-- menu_TextView的样式 -->
+    <style name="pyw_menu_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/pyw_menu_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- menu_TextView的样式 选中 -->
+    <style name="pyw_menu_tv_sel">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- menu_TextView的样式 -->
+    <style name="pyw_pop_tv">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/pyw_menu_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="pyw_pop_tv_sel">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 中号 -->
+    <style name="pyw_mid_tv">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/pyw_menu_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 中号黑 -->
+    <style name="pyw_midblack_tv">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/pyw_deep_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 中号白 -->
+    <style name="pyw_midWhite_tv">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 大号 -->
+    <style name="pyw_big_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/pyw_menu_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 大号 -->
+    <style name="pyw_bigWhite_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 大号红 -->
+    <style name="pyw_bigRed_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/pyw_red</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 中号红 -->
+    <style name="pyw_midRed_tv">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/pyw_red</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 超大号 -->
+    <style name="pyw_lagWhite_tv">
+        <item name="android:textSize">@dimen/pyw_32</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- topbar 超大号 -->
+    <style name="pyw_topWhite_tv">
+        <item name="android:textSize">@dimen/pyw_top</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- 超大号红 -->
+    <style name="pyw_lagRed_tv">
+        <item name="android:textSize">@dimen/pyw_32</item>
+        <item name="android:textColor">@color/pyw_red</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="pyw_smallRed_tv">
+        <item name="android:textSize">@dimen/pyw_22</item>
+        <item name="android:textColor">@color/pyw_red</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <!-- 超大号红 -->
+    <style name="pyw_Red_tv_48">
+        <item name="android:textSize">@dimen/pyw_48</item>
+        <item name="android:textColor">@color/pyw_red</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 大号深黑 -->
+    <style name="pyw_bigblack_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/pyw_deep_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 大号浅黑 -->
+    <style name="pyw_midfleetblack_tv">
+        <item name="android:textSize">@dimen/pyw_28</item>
+        <item name="android:textColor">@color/pyw_fleet_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 大号浅黑 -->
+    <style name="pyw_bigfleetblack_tv">
+        <item name="android:textSize">@dimen/pyw_30</item>
+        <item name="android:textColor">@color/pyw_fleet_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 24号浅黑 -->
+    <style name="pyw_fleetblack_tv_24">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/pyw_24</item>
+        <item name="android:textColor">@color/pyw_fleet_text</item>
+    </style>
+
+    <!-- 小号浅黑 -->
+    <style name="pyw_smallfleetblack_tv">
+        <item name="android:textSize">@dimen/pyw_22</item>
+        <item name="android:textColor">@color/pyw_fleet_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="pyw_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/pyw_line</item>
+    </style>
+
+    <style name="pyw_v_whiteline">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/pyw_all_bg</item>
+    </style>
+    <!-- 图表明细的分类颜色 -->
+    <style name="pyw_viewdetail_color">
+        <item name="android:layout_width">100dip</item>
+        <item name="android:layout_height">4dip</item>
+        <item name="android:background">@color/pyw_fleetblack</item>
+    </style>
+    <!-- 图表明细的分类 -->
+    <style name="pyw_viewdetail_type">
+        <item name="android:layout_width">100dip</item>
+        <item name="android:layout_height">63dip</item>
+        <item name="android:background">@color/pyw_droplist_bg</item>
+    </style>
+
+    <!-- pop_menu 动画 -->
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_hid</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="pyw_listview">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@color/pyw_line</item>
+        <item name="android:paddingLeft">@dimen/pyw_padding</item>
+        <item name="android:paddingRight">@dimen/pyw_padding</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+    </style>
+
+    <!-- customer -->
+    <style name="pyw_add_customer_ll">
+        <item name="android:paddingBottom">@dimen/customer_distance_5</item>
+        <item name="android:paddingTop">@dimen/customer_distance_5</item>
+        <item name="android:layout_marginLeft">@dimen/customer_distance_40</item>
+        <item name="android:layout_marginRight">@dimen/customer_distance_40</item>
+        <item name="android:layout_height">@dimen/customer_distance_88</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="pyw_customer_select">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">@drawable/spinner_button</item>
+        <item name="android:drawableRight">@drawable/search_down</item>
+        <item name="android:gravity">left</item>
+        <item name="android:text">@string/lk_sel_moren</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+        <!-- <item name="android:textStyle">bold</item> -->
+    </style>
+
+    <style name="pyw_customer_tv_name">
+        <item name="android:layout_width">@dimen/customer_font_size_250</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+    </style>
+
+    <style name="pyw_customer_tv_name1">
+        <item name="android:layout_width">@dimen/customer_font_size_100</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+    </style>
+
+    <style name="pyw_customer_tv_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="pyw_customer_ed">
+        <item name="android:padding">@dimen/customer_distance_5</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="pyw_customer_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">@dimen/customer_distance_40</item>
+        <item name="android:layout_marginRight">@dimen/customer_distance_40</item>
+        <item name="android:background">@color/pyw_line</item>
+    </style>
+
+    <style name="pyw_customer_tv_title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/customer_distance_72</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/pyw_droplist_bg</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/customer_distance_40</item>
+    </style>
+
+    <style name="pyw_customer_ed_new">
+        <item name="android:layout_height">@dimen/customer_distance_88</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:paddingLeft">@dimen/customer_distance_40</item>
+        <item name="android:paddingRight">@dimen/customer_distance_40</item>
+        <item name="android:textSize">@dimen/customer_font_size_30</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="pyw_titlePopup">
+        <item name="android:button">@null</item>
+        <item name="android:layout_marginLeft">@dimen/customer_distance_5</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/droplist_selector_btn</item>
+        <item name="android:textColor">@color/pyw_login_text</item>
+        <item name="android:text">@string/lk_sel_moren</item>
+    </style>
+
+    <style name="pyw_customer_row_right">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">right</item>
+        <!-- <item name="android:textColor">@color/light</item> -->
+    </style>
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

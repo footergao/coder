@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/template_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/lk_topbar" >
+    </include>
+
+    <LinearLayout
+        android:id="@+id/template_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/template_bottom"
+        android:layout_below="@+id/template_top"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:scrollbars="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>
