@@ -14,7 +14,7 @@ import com.likou.activity.common.BaseFragmentActivity;
 import com.likou.application.Config;
 import com.likou.model.Member;
 
-public abstract class RegisterActivity1 extends BaseFragmentActivity {
+public class RegisterActivity1 extends BaseFragmentActivity {
 
 	// private static final String ACTION_VERIFYTELEPHONE =
 	// "api/m/member_verifytelephone.action?";
@@ -37,13 +37,37 @@ public abstract class RegisterActivity1 extends BaseFragmentActivity {
 	private LinearLayout ll_code;
 	private int number = 0;
 	private Thread mThread;
+	
+	
+	@Override
+	protected int centerLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.glk_register1;
+	}
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.glk_register1);
-		initView();
-		initAction();
+	protected void initCenter(View centerView) {
+		// TODO Auto-generated method stub
+
+		setTitleTextRes("忘记密码");
+		
+		bt_back = (Button) findViewById(R.id.top_btn_left);
+		title = (TextView) findViewById(R.id.top_btn_center);
+		title.setText(R.string.register);
+		findViewById(R.id.top_btn_right).setBackgroundColor(000000);
+
+		ll_code = (LinearLayout) findViewById(R.id.ll_code);
+
+		et_tel = (EditText) findViewById(R.id.et_tel);
+		et_code = (EditText) findViewById(R.id.et_code);
+		bt_sendcode = (Button) findViewById(R.id.bt_sendcode);
+		bt_next = (Button) findViewById(R.id.bt_next);
+	
+	}
+
+	@Override
+	protected void initData() {
+		// TODO Auto-generated method stub
 		mThread = new Thread() {
 			@Override
 			public void run() {
@@ -58,19 +82,13 @@ public abstract class RegisterActivity1 extends BaseFragmentActivity {
 		};
 	}
 
-	private void initView() {
-		bt_back = (Button) findViewById(R.id.top_btn_left);
-		title = (TextView) findViewById(R.id.top_btn_center);
-		title.setText(R.string.register);
-		findViewById(R.id.top_btn_right).setBackgroundColor(000000);
-
-		ll_code = (LinearLayout) findViewById(R.id.ll_code);
-
-		et_tel = (EditText) findViewById(R.id.et_tel);
-		et_code = (EditText) findViewById(R.id.et_code);
-		bt_sendcode = (Button) findViewById(R.id.bt_sendcode);
-		bt_next = (Button) findViewById(R.id.bt_next);
+	@Override
+	protected void initAction() {
+		// TODO Auto-generated method stub
+		
 	}
+	
+
 
 //	initAction() {
 //		bt_back.setOnClickListener(new OnClickListener() {
@@ -248,5 +266,6 @@ public abstract class RegisterActivity1 extends BaseFragmentActivity {
 			finish();
 		}
 	}
+
 
 }

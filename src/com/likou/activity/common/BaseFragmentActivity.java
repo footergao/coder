@@ -62,7 +62,6 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 
 	protected View centerView;
 
-	private TextView tvTitle;
 	private String title;
 
 	protected Button bt_top_left;
@@ -80,6 +79,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 
 		setContentView(R.layout.template_layout_defination);
 		//
+		mApplication = (LikouApplication) getApplication();
 		WindowManager manage = getWindowManager();
 		Display display = manage.getDefaultDisplay();
 		screenHeight = display.getHeight();
@@ -93,11 +93,10 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		centerView = lInflater.inflate(centerLayoutId(), null, true);
 		center.addView(centerView);
 		initCenter(center);
-		tvTitle.setText(title);
+		bt_top_center.setText(title);
 		initData();
 		initAction();
 		//
-		mApplication = (LikouApplication) getApplication();
 		mLocation = mApplication.getBDLocation();
 		mDBHelper = mApplication.getDBHelper();
 		mPreferences = getSharedPreferences(Config.APP_NAME, MODE_PRIVATE);
@@ -268,7 +267,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	protected final void setTitleTextRes(String title)
 	{
 		this.title = title;
-		if (screenHeight >= 1280) tvTitle.setTextSize(30);
+		if (screenHeight >= 1280) bt_top_center.setTextSize(30);
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.likou.activity.main;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,12 +8,11 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import com.likou.R;
-import com.likou.activity.common.BaseActivity;
 import com.likou.activity.common.BaseFragmentActivity;
 
 
 
-public class Welcome extends BaseActivity {
+public class Welcome extends Activity {
 
 
 	private AlphaAnimation start_anima;
@@ -59,37 +59,5 @@ public class Welcome extends BaseActivity {
 		Intent intent = new Intent(this, LoginActivity.class);
 		startActivity(intent);
 		finish();
-	}
-
-
-
-	@Override
-	protected int centerLayoutId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-
-
-	@Override
-	protected void initCenter(View centerView) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-	@Override
-	protected void initData() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-	@Override
-	protected void initAction() {
-		// TODO Auto-generated method stub
-		
 	}
 }

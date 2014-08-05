@@ -29,19 +29,21 @@ public class RegisterActivity2 extends BaseFragmentActivity {
 	private String mUserName;
 	private String mPassword;
 	private String mTelephone;
-
 	private String mPassword2;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.glk_register2);
-		mTelephone = getIntent().getStringExtra("telephone");
-		initView();
-		initAction();
+	protected int centerLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.glk_register2;
 	}
 
-	private void initView() {
+	@Override
+	protected void initCenter(View centerView) {
+		// TODO Auto-generated method stub
+		
+		setTitleTextRes("用户注册");
+		
+		
 		bt_back = (Button) findViewById(R.id.top_btn_left);
 		title = (TextView) findViewById(R.id.top_btn_center);
 		title.setText(R.string.register);
@@ -54,30 +56,22 @@ public class RegisterActivity2 extends BaseFragmentActivity {
 		bt_finish = (Button) findViewById(R.id.bt_finish);
 	}
 
-//	private void initAction() {
-//		bt_back.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				onBackPressed();
-//			}
-//		});
-//
-//		bt_finish.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View arg0) {
-//				getInfo();
-//				if (passSameCheck()) {
-//					mProgressDialog = getDefaultDialog(R.string.registerMessage);
-//					mProgressDialog.show();
-//					httpRequest(getUrl(), API_REGISTER);
-//				} else {
-//					showToast(R.string.passError);
-//				}
-//			}
-//		});
-//	}
+	@Override
+	protected void initData() {
+		// TODO Auto-generated method stub
+		mTelephone = getIntent().getStringExtra("telephone");
+	}
+
+	@Override
+	protected void initAction() {
+		// TODO Auto-generated method stub
+		bt_back.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				onBackPressed();
+			}
+		});
+	}
 
 	protected void getInfo() {
 		mPassword = et_password.getText().toString().trim();
@@ -150,30 +144,6 @@ public class RegisterActivity2 extends BaseFragmentActivity {
 		String url = String.format(ACTION_REGISTER, mTelephone, mUserName,
 				mPassword);
 		return new StringBuffer(Config.WEBSERVICE_URL).append(url).toString();
-	}
-
-	@Override
-	protected int centerLayoutId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	protected void initCenter(View centerView) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	protected void initData() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	protected void initAction() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
