@@ -46,7 +46,6 @@ public class RegisterActivity2 extends BaseFragmentActivity {
 		
 		bt_back = (Button) findViewById(R.id.top_btn_left);
 		title = (TextView) findViewById(R.id.top_btn_center);
-		title.setText(R.string.register);
 		findViewById(R.id.top_btn_right).setBackgroundColor(000000);
 
 		et_username = (EditText) findViewById(R.id.et_username);
@@ -54,6 +53,39 @@ public class RegisterActivity2 extends BaseFragmentActivity {
 		et_passagaion = (EditText) findViewById(R.id.et_passagain);
 
 		bt_finish = (Button) findViewById(R.id.bt_finish);
+		
+		
+		
+		
+		
+	showRightView(true, "用已有登录账号", new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startToActivity(LoginActivity.class, null);
+			}
+		});
+	
+	
+	showLeftView(true,new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			finish();
+		}
+	});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	@Override

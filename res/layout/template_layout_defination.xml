@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/main_background"
+    android:background="#f1f1f1"
     android:orientation="vertical" >
 
     <include
@@ -16,8 +16,7 @@
     <LinearLayout
         android:id="@+id/template_center"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/template_bottom"
+        android:layout_height="fill_parent"
         android:layout_below="@+id/template_top"
         android:layout_centerInParent="true"
         android:orientation="vertical"

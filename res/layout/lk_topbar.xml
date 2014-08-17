@@ -2,11 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@color/top_bar_bg"
+    android:background="@color/white"
     android:padding="5dp" >
 
     <Button
-       
         android:id="@+id/top_btn_center"
         style="@style/pyw_topWhite_tv"
         android:layout_width="wrap_content"
@@ -15,33 +14,33 @@
         android:background="@android:color/transparent"
         android:gravity="center_vertical"
         android:text="@string/app_name"
-        android:textColor="@color/white" />
+      />
 
     <Button
-         android:visibility="gone"
+        android:visibility="gone"
         android:id="@+id/top_btn_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="5dp"
+       	android:padding="5dp"
         android:background="@color/transparent"
-        android:drawableLeft="@drawable/glk_back"
+        android:drawableLeft="@color/gray"
         android:text="@string/button_back"
-        android:textColor="@color/white"
+        android:textColor="@color/gray"
         android:textSize="16sp" />
 
     <Button
+        android:padding="5dp"
         android:visibility="gone"
         android:id="@+id/top_btn_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="5dp"
         android:background="@null"
         android:gravity="center_vertical"
-        android:textColor="@color/white"
+        android:textColor="@color/gray"
         android:textSize="16sp"
         />
 

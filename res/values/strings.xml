@@ -73,11 +73,11 @@
     <string name="loading">正在加载数据&#8230;</string>
     
     <string name="username">用户名</string>
-    <string name="password">密码</string>
+    <string name="password">密码：</string>
     <string name="login">登录</string>
     <string name="register">新用户注册</string>
     
-    <string name="usernameOrTel">账号</string>
+    <string name="usernameOrTel">账号：</string>
     
     <string name="registertel">请输入您的手机号：</string>
     <string name="telcode">请输入手机验证码：</string>

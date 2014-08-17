@@ -323,7 +323,7 @@
     <!-- topbar 超大号 -->
     <style name="pyw_topWhite_tv">
         <item name="android:textSize">@dimen/pyw_top</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <!-- 超大号红 -->

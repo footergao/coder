@@ -3,13 +3,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#f1f1f1"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="15dp" >
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dip" >
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgbd"
+        android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,12 +25,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
                 android:text="@string/usernameOrTel"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/et_username"
                 android:layout_width="match_parent"
-                android:layout_height="40dip"
+                android:layout_height="40dp"
+                android:hint="请输入手机号"
                 android:background="@null"
                 android:singleLine="true" >
 
@@ -52,27 +55,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/password"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <EditText
+                android:hint="请输入密码"
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
-                android:layout_height="40dip"
+                android:layout_height="40dp"
                 android:background="@null"
                 android:ems="10"
                 android:password="true"
                 android:singleLine="true" />
         </LinearLayout>
-
-        <View>
-        </View>
     </LinearLayout>
 
     <Button
         android:id="@+id/bt_login"
         android:layout_width="match_parent"
         android:layout_height="40dip"
-        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dp"
         android:background="@drawable/login_button"
         android:text="@string/login"
         android:textColor="@color/white"
@@ -82,6 +83,7 @@
         android:id="@+id/bt_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@null"
         android:gravity="left"
         android:text="@string/register"
