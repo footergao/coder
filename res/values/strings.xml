@@ -135,4 +135,6 @@
    	<string name="coupons">优惠券</string>
    	<string name="myOrder">我的订单</string>
 
+   	
+   	 <string name="icon_bao">本地视频</string>
 </resources>
