@@ -21,10 +21,10 @@ public class Welcome extends Activity {
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
-		view = View.inflate(this, R.layout.circle_menu, null);
+		view = View.inflate(this, R.layout.activity_main, null);
 		setContentView(view);
 
-//		initView();
+		initView();
 	}
 	
 	
